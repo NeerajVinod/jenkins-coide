@@ -1,0 +1,9 @@
+node{
+    stage("Clone the project"){
+        git branch: 'master', url: 'https://github.com/NeerajVinod/jenkins-coide.git'
+    }
+    stage("Complication"){
+        bat "./mvnw clean install -DskipTests"
+    }
+
+}
